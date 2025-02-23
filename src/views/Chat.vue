@@ -1,7 +1,5 @@
-<!-- filepath: /C:/Users/micha/OneDrive - UvA/Block 3/DevOps/student-portal/src/views/Chat.vue -->
 <template>
   <div class="chat-page">
-    <!-- The scrollable messages area -->
     <div class="chat-messages">
       <div
         v-for="msg in messages"
@@ -13,7 +11,6 @@
       </div>
     </div>
 
-    <!-- Sticky input at the bottom -->
     <div class="chat-input-area">
       <input
         v-model="newMessage"
@@ -21,7 +18,6 @@
         placeholder="Type a message..."
       />
       <button @click="sendMessage" class="send-btn">
-        <!-- Paper plane icon -->
         <svg
           width="20"
           height="20"
@@ -56,25 +52,20 @@ const sendMessage = async () => {
   }
 };
 
-/**
- * Bubbles are styled based on role:
- *   - 'ai' => left (grey)
- *   - 'user' => right (blue)
- */
 const bubbleClass = (role) => {
   return role === "ai" ? "ai-message" : "user-message";
 };
 </script>
 
 <style scoped>
-/* The chat-page fills the parent's space (see App.vue) */
 .chat-page {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Fills the entire viewport */
+  height: 100vh;
+  margin-right: 300px;
+  margin-left: 300px;
 }
 
-/* Scrollable messages area */
 .chat-messages {
   flex: 1;
   overflow-y: auto;
@@ -84,12 +75,10 @@ const bubbleClass = (role) => {
   flex-direction: column;
 }
 
-/* Common message styling */
 .message {
-  /* Restrict bubble width so text wraps */
   max-width: 60%;
-  overflow-wrap: break-word; /* ensures long text wraps properly */
-  white-space: pre-wrap; /* preserve newlines but wrap lines */
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
   margin-bottom: 10px;
   padding: 15px;
   border-radius: 8px;
@@ -97,21 +86,18 @@ const bubbleClass = (role) => {
   line-height: 1.4;
 }
 
-/* AI (server) on the left */
 .ai-message {
   align-self: flex-start;
   background: #e0e0e0;
   color: #333;
 }
 
-/* User on the right */
 .user-message {
   align-self: flex-end;
   background: #007bff;
   color: #fff;
 }
 
-/* Sticky input bar pinned to the bottom */
 .chat-input-area {
   position: sticky;
   bottom: 0;
@@ -121,7 +107,6 @@ const bubbleClass = (role) => {
   padding: 10px;
 }
 
-/* Full-width text input */
 .chat-input-area input {
   flex: 1;
   border: 1px solid #ccc;
@@ -130,7 +115,6 @@ const bubbleClass = (role) => {
   font-size: 16px;
 }
 
-/* Send button is small on the right */
 .send-btn {
   width: 50px;
   background: #007bff;

@@ -11,7 +11,7 @@ export const useUserStore = defineStore("user", () => {
 
   const fetchUser = async () => {
     try {
-      const response = await apiClient.get("/user");
+      const response = await apiClient.get("/user"); //To be implemented
       user.value = {
         firstName: response.data.firstName,
         lastName: response.data.lastName,
@@ -27,7 +27,7 @@ export const useUserStore = defineStore("user", () => {
 
   const updateUser = async (newUserData) => {
     try {
-      await apiClient.put("/user", newUserData);
+      await apiClient.put("/user", newUserData); //To be implemented
       user.value = newUserData;
     } catch (error) {
       console.error(

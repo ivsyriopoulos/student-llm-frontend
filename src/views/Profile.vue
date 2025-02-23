@@ -2,13 +2,13 @@
   <div class="profile-container">
     <h1 class="title">User Profile</h1>
     <form @submit.prevent="saveProfile">
-      <label>First Name:</label>
+      <label>First Name</label>
       <input v-model="user.firstName" type="text" />
 
-      <label>Last Name:</label>
+      <label>Last Name</label>
       <input v-model="user.lastName" type="text" />
 
-      <label>Email:</label>
+      <label>Email</label>
       <input v-model="user.email" type="email" />
 
       <button type="submit">Save</button>

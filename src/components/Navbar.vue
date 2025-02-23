@@ -2,7 +2,7 @@
   <nav>
     <div class="brand">
       <img src="/student.png" alt="Student Logo" class="nav-logo" />
-      <h1>Student Portal</h1>
+      <h1>Better Canvas</h1>
     </div>
     <div class="links">
       <router-link to="/profile">Profile</router-link>
