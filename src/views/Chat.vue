@@ -73,6 +73,7 @@ const bubbleClass = (role) => {
   background: #f4f4f4;
   display: flex;
   flex-direction: column;
+  background-color: #d6e6ff;
 }
 
 .message {
@@ -88,13 +89,13 @@ const bubbleClass = (role) => {
 
 .ai-message {
   align-self: flex-start;
-  background: #e0e0e0;
-  color: #333;
+  background: #5f95e7;
+  color: #fff;
 }
 
 .user-message {
   align-self: flex-end;
-  background: #007bff;
+  background: #409cff;
   color: #fff;
 }
 
@@ -103,8 +104,9 @@ const bubbleClass = (role) => {
   bottom: 0;
   background: #fff;
   display: flex;
-  border-top: 1px solid #ddd;
+  /*border-top: 1px solid #ddd;*/
   padding: 10px;
+  background-color: #d6e6ff;
 }
 
 .chat-input-area input {
@@ -117,7 +119,7 @@ const bubbleClass = (role) => {
 
 .send-btn {
   width: 50px;
-  background: #007bff;
+  background: #409cff;
   border: none;
   border-radius: 0 5px 5px 0;
   display: flex;
@@ -128,5 +130,15 @@ const bubbleClass = (role) => {
 
 .send-btn:hover {
   background: #0056b3;
+}
+
+@media (max-width: 600px),
+       (orientation: landscape) and (max-height: 600px) {
+  .chat-page {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 </style>
